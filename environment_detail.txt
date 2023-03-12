@@ -1,0 +1,1 @@
+pipでtorchをサイトに従って手動インストールした後、pipでrequirements.txtから残りをインストール（torchはreuqirements.txtから削除してある）

@@ -32,6 +32,10 @@ register(
     reward_threshold=0.78,  # optimum = .8196
 )
 
+register(
+    id="InventoryManagement-v0",
+    entry_point="myenv.env:SupplyChain"
+)
 
 def get_base_env(env):
     """ removes all wrappers """
