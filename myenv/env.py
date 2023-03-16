@@ -216,10 +216,7 @@ class SupplyChainEnvironment:
         # co-sinusoidal function with a stochastic component (a random variable
         # assumed to be distributed according to a uniform distribution),
         # in order to evaluate the agent
-        demand = np.round(
-            self.d_max[i-1]/2 +
-            self.d_max[i-1]/2*np.cos(4*np.pi*(2*j*i+t)/self.T) +
-            np.random.randint(0, self.d_var[i-1]+1))
+        demand = self.d_max[i-1]/2 + self.d_max[i-1]/2*np.cos(4*np.pi*(2*j*i+t)/self.T) + np.random.randint(0, self.d_var[i-1]+1)
 
         logger.debug(f"\n--- SupplyChainEnvironment --- demand"
                      f"\nj is "

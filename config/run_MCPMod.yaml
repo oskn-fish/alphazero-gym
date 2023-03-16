@@ -6,7 +6,7 @@ defaults:
   - loss: A0CLossTuned
     
 
-game: InventoryManagement-v0
+game: MCPMod-v0
 seed: 34
 num_train_episodes: 45
 max_episode_length: 200

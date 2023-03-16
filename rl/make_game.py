@@ -17,6 +17,8 @@ from .wrappers import (
 # Register deterministic FrozenLakes
 from gym.envs.registration import register
 
+
+# 元々ある環境をis_slippery=Falseとしたやつを新しく登録しているだけ
 register(
     id="FrozenLakeNotSlippery-v0",
     entry_point="gym.envs.toy_text:FrozenLakeEnv",
@@ -31,10 +33,13 @@ register(
     max_episode_steps=100,
     reward_threshold=0.78,  # optimum = .8196
 )
-
 register(
     id="InventoryManagement-v0",
     entry_point="myenv.env:SupplyChain"
+)
+register(
+    id="MCPMod-v0",
+    entry_point="myenv.MCPModEnv:MCPModEnv"
 )
 
 def get_base_env(env):
